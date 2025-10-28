@@ -5,7 +5,6 @@
 double readnumber()
 {
 	double n;
-	std::cout << "Welcome to ruben's first calculator." << std::endl;
 	std::cout << "Please enter your number." << std::endl;
 	std::cin >> n;
 
