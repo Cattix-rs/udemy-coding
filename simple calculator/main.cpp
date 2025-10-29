@@ -18,7 +18,7 @@ int main()
 		std::cin >> n;
 	}
 	std::cout << "the number you enterd was " <<  n;
-	enum
+	enum 
 	{
 		addition,
 		subtraction,
@@ -26,11 +26,13 @@ int main()
 		divison
 
 	};
-
-	std::cout << "now enter the respective nubmer of your chosesn calculatoi type addition 0 subtraction 1 multiplication 2 divison 3 " << std::endl;
-	std::cin >> enum nubmber
+	int nubmber;
+	std::cout << "now enter the respective nubmer of your chosen calculaton type addition 0 subtraction 1 multiplication 2 divison 3 " << std::endl;
+	std::cin >> nubmber;
 	double sn;
 	std::cout << "enter your second number after that caculation will begin" << std::endl;
+	std::cin >> sn;
+	
 	double a;
 	while (std::cin.fail())
 	{
@@ -40,30 +42,30 @@ int main()
 		std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
 		std::cin >> sn;
 	}
-	if enum(0)
+	if (nubmber == 0)
 	{
-		a = n + sn
-			std::cout << "The anwnser is a " std::endl;
+		a = n + sn;
+			std::cout << "The anwnser is  "  << a << std::endl;
 	}
-	else if enum(1)
+	else if (nubmber == 1)
 	{
-		a = n - sn
-			std::cout << "The anwnser is a " std::endl;
+		a = n - sn;
+		std::cout << "The anwnser is  " << a << std::endl;
 	}
-	else if enum(2)
+	else if (nubmber == 2)
 	{
-		a = n * sn
-			std::cout << "The anwnser is a " std::endl;
+		a = n * sn;
+			std::cout << "The anwnser is a " << std::endl;
 	}
-	else if enum(3)
+	else if (nubmber == 3)
 	{
-		if (sn = 0)
+		while ( sn == 0.0)
 		{
-			std::cout << "cant devide by 0"
-				return 1;
+			std::cout << "ERROR: Cannot divide by 0!" << std::endl;
+			std::cin >> sn;
 		}
-		a = n / sn
-			std::cout << "The anwnser is a " std::endl;
+		a = n / sn;
+		std::cout << "The anwnser is  " << a << std::endl;
 	}
 	return 0;
 }
