@@ -27,7 +27,7 @@ int main()
 
 	};
 	int nubmber;
-	std::cout << "now enter the respective nubmer of your chosen calculaton type addition 0 subtraction 1 multiplication 2 divison 3 " << std::endl;
+	std::cout << "now enter the respective nubmer of your chosen calculaton type addition ( 0 ) subtraction ( 1 ) multiplication ( 2 ) divison ( 3 ) " << std::endl;
 	std::cin >> nubmber;
 	double sn;
 	std::cout << "enter your second number after that caculation will begin" << std::endl;
@@ -55,7 +55,7 @@ int main()
 	else if (nubmber == 2)
 	{
 		a = n * sn;
-			std::cout << "The anwnser is a " << std::endl;
+		std::cout << "The anwnser is  " << a << std::endl;
 	}
 	else if (nubmber == 3)
 	{
