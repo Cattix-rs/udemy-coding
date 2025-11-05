@@ -37,6 +37,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "pointers", "pointers\pointe
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "arrays", "arrays\arrays.vcxproj", "{1F59E7C1-A038-4AC5-B1FD-CDDF319A1844}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "intake assingment", "intake assingment\intake assingment.vcxproj", "{A9B281CF-C5D4-47BC-9EF9-55C159E847AE}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -181,6 +183,14 @@ Global
 		{1F59E7C1-A038-4AC5-B1FD-CDDF319A1844}.Release|x64.Build.0 = Release|x64
 		{1F59E7C1-A038-4AC5-B1FD-CDDF319A1844}.Release|x86.ActiveCfg = Release|Win32
 		{1F59E7C1-A038-4AC5-B1FD-CDDF319A1844}.Release|x86.Build.0 = Release|Win32
+		{A9B281CF-C5D4-47BC-9EF9-55C159E847AE}.Debug|x64.ActiveCfg = Debug|x64
+		{A9B281CF-C5D4-47BC-9EF9-55C159E847AE}.Debug|x64.Build.0 = Debug|x64
+		{A9B281CF-C5D4-47BC-9EF9-55C159E847AE}.Debug|x86.ActiveCfg = Debug|Win32
+		{A9B281CF-C5D4-47BC-9EF9-55C159E847AE}.Debug|x86.Build.0 = Debug|Win32
+		{A9B281CF-C5D4-47BC-9EF9-55C159E847AE}.Release|x64.ActiveCfg = Release|x64
+		{A9B281CF-C5D4-47BC-9EF9-55C159E847AE}.Release|x64.Build.0 = Release|x64
+		{A9B281CF-C5D4-47BC-9EF9-55C159E847AE}.Release|x86.ActiveCfg = Release|Win32
+		{A9B281CF-C5D4-47BC-9EF9-55C159E847AE}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

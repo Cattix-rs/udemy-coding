@@ -17,7 +17,7 @@ int main()
 		std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
 		std::cin >> n;
 	}
-	std::cout << "the number you enterd was " <<  n;
+	std::cout << "the number you enterd was " <<  n << std::endl;
 	enum 
 	{
 		addition,
@@ -42,26 +42,28 @@ int main()
 		std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
 		std::cin >> sn;
 	}
-	if (nubmber == 0)
+	if (nubmber == addition)
 	{
 		a = n + sn;
 			std::cout << "The anwnser is  "  << a << std::endl;
 	}
-	else if (nubmber == 1)
+	else if (nubmber == subtraction)
 	{
 		a = n - sn;
 		std::cout << "The anwnser is  " << a << std::endl;
 	}
-	else if (nubmber == 2)
+	else if (nubmber == multiplication)
 	{
 		a = n * sn;
 		std::cout << "The anwnser is  " << a << std::endl;
 	}
-	else if (nubmber == 3)
+	else if (nubmber == divison)
 	{
 		while ( sn == 0.0)
 		{
 			std::cout << "ERROR: Cannot divide by 0!" << std::endl;
+			std::cin.clear();
+			std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
 			std::cin >> sn;
 		}
 		a = n / sn;
