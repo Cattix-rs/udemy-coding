@@ -49,6 +49,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Bitwise operators", "Bitwis
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "flow control", "flow control\flow control.vcxproj", "{B5426AF2-DBBE-4CB3-B144-95F320B91CB5}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "functions", "functions\functions.vcxproj", "{8ED95147-BC93-4082-AB7C-2B507FABDC6A}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -241,6 +243,14 @@ Global
 		{B5426AF2-DBBE-4CB3-B144-95F320B91CB5}.Release|x64.Build.0 = Release|x64
 		{B5426AF2-DBBE-4CB3-B144-95F320B91CB5}.Release|x86.ActiveCfg = Release|Win32
 		{B5426AF2-DBBE-4CB3-B144-95F320B91CB5}.Release|x86.Build.0 = Release|Win32
+		{8ED95147-BC93-4082-AB7C-2B507FABDC6A}.Debug|x64.ActiveCfg = Debug|x64
+		{8ED95147-BC93-4082-AB7C-2B507FABDC6A}.Debug|x64.Build.0 = Debug|x64
+		{8ED95147-BC93-4082-AB7C-2B507FABDC6A}.Debug|x86.ActiveCfg = Debug|Win32
+		{8ED95147-BC93-4082-AB7C-2B507FABDC6A}.Debug|x86.Build.0 = Debug|Win32
+		{8ED95147-BC93-4082-AB7C-2B507FABDC6A}.Release|x64.ActiveCfg = Release|x64
+		{8ED95147-BC93-4082-AB7C-2B507FABDC6A}.Release|x64.Build.0 = Release|x64
+		{8ED95147-BC93-4082-AB7C-2B507FABDC6A}.Release|x86.ActiveCfg = Release|Win32
+		{8ED95147-BC93-4082-AB7C-2B507FABDC6A}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
