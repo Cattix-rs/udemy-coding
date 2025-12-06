@@ -51,6 +51,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "flow control", "flow contro
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "functions", "functions\functions.vcxproj", "{8ED95147-BC93-4082-AB7C-2B507FABDC6A}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "function templates", "function templates\function templates.vcxproj", "{C85F5476-EA0D-4348-B50B-95CE58E41C3A}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -251,6 +253,14 @@ Global
 		{8ED95147-BC93-4082-AB7C-2B507FABDC6A}.Release|x64.Build.0 = Release|x64
 		{8ED95147-BC93-4082-AB7C-2B507FABDC6A}.Release|x86.ActiveCfg = Release|Win32
 		{8ED95147-BC93-4082-AB7C-2B507FABDC6A}.Release|x86.Build.0 = Release|Win32
+		{C85F5476-EA0D-4348-B50B-95CE58E41C3A}.Debug|x64.ActiveCfg = Debug|x64
+		{C85F5476-EA0D-4348-B50B-95CE58E41C3A}.Debug|x64.Build.0 = Debug|x64
+		{C85F5476-EA0D-4348-B50B-95CE58E41C3A}.Debug|x86.ActiveCfg = Debug|Win32
+		{C85F5476-EA0D-4348-B50B-95CE58E41C3A}.Debug|x86.Build.0 = Debug|Win32
+		{C85F5476-EA0D-4348-B50B-95CE58E41C3A}.Release|x64.ActiveCfg = Release|x64
+		{C85F5476-EA0D-4348-B50B-95CE58E41C3A}.Release|x64.Build.0 = Release|x64
+		{C85F5476-EA0D-4348-B50B-95CE58E41C3A}.Release|x86.ActiveCfg = Release|Win32
+		{C85F5476-EA0D-4348-B50B-95CE58E41C3A}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
