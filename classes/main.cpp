@@ -13,6 +13,8 @@ public:
 
 	Entity(const Entity& e); // copy constructor
 
+	 virtual void draw() const; //immutable
+
 private:
 	int hitPoints = 0;
 
@@ -35,12 +37,18 @@ Entity::~Entity()
 	std::cout << "Entity::~Entity()" << hitPoints << std::endl;
 }
 
+void Entity::draw() const
+{
+	std::cout << "Entity::draw()" << std::endl;
+}
+
 class Player : public Entity
 {
 public:
 	explicit Player(int hitPoints = 100);
 	~Player();
 
+	void draw() const override;
 };
 
 Player::Player(int hitPoints)
@@ -54,6 +62,11 @@ Player::~Player()
 	std::cout << "Player::~Player()" << std::endl;
 }
 
+void Player::draw() const
+{
+	std::cout << "Player::draw()" << std::endl;
+}
+
 void printHitPoints(const Entity& e)
 {
 	std::cout << "hitPoints: " << e.getHitPoints() << std::endl;
@@ -63,8 +76,10 @@ int main()
 {
 	Player player{ };
 	
-
+	player.draw(); // draw the player to the screen.
 	
+	Entity* e = &player;
+	e->draw();
 
 	return 0;
 }
