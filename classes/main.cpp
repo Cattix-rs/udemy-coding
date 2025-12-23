@@ -6,7 +6,7 @@ public:
 	explicit Entity(int hitPoint = 100); // parameterized constructor.
 	~Entity();
 
-	int getHitpoints() const
+	int getHitPoints() const
 	{
 		return hitPoints;
 	}
@@ -35,15 +35,33 @@ Entity::~Entity()
 	std::cout << "Entity::~Entity()" << hitPoints << std::endl;
 }
 
+class Player : public Entity
+{
+public:
+	explicit Player(int hitPoints = 100);
+	~Player();
+
+};
+
+Player::Player(int hitPoints)
+	: Entity(hitPoints)
+{
+	std::cout << "Player::Player( " << hitPoints << ")" << std::endl;
+}
+
+Player::~Player()
+{
+	std::cout << "Player::~Player()" << std::endl;
+}
+
 void printHitPoints(const Entity& e)
 {
-	std::cout << "hitPoints: " << e.getHitpoints() << std::endl;
+	std::cout << "hitPoints: " << e.getHitPoints() << std::endl;
 }
 
 int main()
 {
-	Entity entity{ 50 };
-	Entity entity2{ entity }; //copy of entity.
+	Player player{ };
 	
 
 	
