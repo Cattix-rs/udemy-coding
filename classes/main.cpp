@@ -1,88 +1,12 @@
 #include <iostream>
+#include <player.hpp>
 
-struct Entity
-{
-
-	explicit Entity(int hitPoint = 100); // parameterized constructor.
-	~Entity();
-
-	int getHitPoints() const
-	{
-		return hitPoints;
-	}
-
-	Entity(const Entity& e); // copy constructor
-
-	 virtual void draw() const; //immutable
-	 virtual void update(float deltaTime) = 0; // pue virtual
-
-private:
-	int hitPoints = 0;
-
-};
-
-Entity::Entity(int hitPoints)
-	: hitPoints(hitPoints)
-{
-	std::cout << "Entity::Entity(" << this->hitPoints << ")" << std::endl;
-}
-
-Entity::Entity(const Entity& e)
-	: hitPoints(e.hitPoints)
-{
-	std::cout << "Entity::Entity(const Entity& e)" << std::endl;
- }
-
-Entity::~Entity()
-{
-	std::cout << "Entity::~Entity()" << hitPoints << std::endl;
-}
-
-void Entity::draw() const
-{
-	std::cout << "Entity::draw()" << std::endl;
-}
-
-struct Player : Entity
-{
-
-	explicit Player(int hitPoints = 100);
-	~Player();
-
-	void draw() const override;
-	void update(float deltaTime) override;
-
-private:
-	int score = 0;
-};
-
-Player::Player(int hitPoints)
-	: Entity(hitPoints)
-{
-	std::cout << "Player::Player( " << hitPoints << ")" << std::endl;
-}
-
-Player::~Player()
-{
-	std::cout << "Player::~Player()" << std::endl;
-}
-
-void Player::draw() const
-{
-	
-	std::cout << "Player::draw()" << std::endl;
-}
-
-void Player::update(float deltaTime)
-{
-	score += 10;
-	std::cout << "player::update(" << deltaTime << ")" << std::endl;
-}
 
 void printHitPoints(const Entity& e)
 {
 	std::cout << "hitPoints: " << e.getHitPoints() << std::endl;
 }
+
 
 int main()
 {
