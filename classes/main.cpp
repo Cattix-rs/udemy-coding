@@ -1,8 +1,8 @@
 #include <iostream>
 
-class Entity
+struct Entity
 {
-public:
+
 	explicit Entity(int hitPoint = 100); // parameterized constructor.
 	~Entity();
 
@@ -43,9 +43,9 @@ void Entity::draw() const
 	std::cout << "Entity::draw()" << std::endl;
 }
 
-class Player : public Entity
+struct Player : Entity
 {
-public:
+
 	explicit Player(int hitPoints = 100);
 	~Player();
 
