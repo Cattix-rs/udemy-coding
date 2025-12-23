@@ -11,6 +11,8 @@ public:
 		return hitPoints;
 	}
 
+	Entity(const Entity& e); // copy constructor
+
 private:
 	int hitPoints = 0;
 
@@ -21,6 +23,12 @@ Entity::Entity(int hitPoints)
 {
 	std::cout << "Entity::Entity(" << this->hitPoints << ")" << std::endl;
 }
+
+Entity::Entity(const Entity& e)
+	: hitPoints(e.hitPoints)
+{
+	std::cout << "Entity::Entity(const Entity& e)" << std::endl;
+ }
 
 Entity::~Entity()
 {
@@ -35,12 +43,10 @@ void printHitPoints(const Entity& e)
 int main()
 {
 	Entity entity{ 50 };
+	Entity entity2{ entity }; //copy of entity.
+	
 
-	/*printHitPoints(entity);
-
-	printHitPoints(Entity{ 10 });*/
-
-	Entity entity2 = Entity{ 100 }; // this is valid because we have a paramtatized constructor
+	
 
 	return 0;
 }
