@@ -14,6 +14,7 @@ public:
 	Entity(const Entity& e); // copy constructor
 
 	 virtual void draw() const; //immutable
+	 virtual void update(float deltaTime) = 0; // pue virtual
 
 private:
 	int hitPoints = 0;
@@ -49,6 +50,10 @@ public:
 	~Player();
 
 	void draw() const override;
+	void update(float deltaTime) override;
+
+private:
+	int score = 0;
 };
 
 Player::Player(int hitPoints)
@@ -64,7 +69,14 @@ Player::~Player()
 
 void Player::draw() const
 {
+	
 	std::cout << "Player::draw()" << std::endl;
+}
+
+void Player::update(float deltaTime)
+{
+	score += 10;
+	std::cout << "player::update(" << deltaTime << ")" << std::endl;
 }
 
 void printHitPoints(const Entity& e)
@@ -76,9 +88,8 @@ int main()
 {
 	Player player{ };
 	
-	player.draw(); // draw the player to the screen.
-	
 	Entity* e = &player;
+	e->update(0.1f);
 	e->draw();
 
 	return 0;
