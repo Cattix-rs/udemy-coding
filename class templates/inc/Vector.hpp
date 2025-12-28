@@ -13,8 +13,8 @@ struct Vector : VectorBase<T, N>
 	//T& operator[](size_t i);
 	//const T& operator[](size_t i) const;
 
-	//template<typename Self>
-	//auto&& operator[](this Self&& self, size_t i);
+	template<typename Self>
+	auto&& operator[](this Self&& self, size_t i);
 
 
 	
@@ -44,13 +44,13 @@ Vector<T, N> Vector<T, N>::operator+(const Vector<T, N>& rhs) const
 	return res;
 }
 
-//template <typename T, size_t N>
-//template <typename Self>
-//auto&& Vector<T, N>::operator[](this Self&& self, size_t i)
-//{
-//	assert(i < N);
-//	return self.data[i];
-//}
+template <typename T, size_t N>
+template <typename Self>
+auto&& Vector<T, N>::operator[](this Self&& self, size_t i)
+{
+	assert(i < N);
+	return self.data[i];
+}
 
 //template <typename Self>
 //auto&& Vector <float, 2>::operator[](Self&& self, size_t i)
@@ -61,6 +61,14 @@ Vector<T, N> Vector<T, N>::operator+(const Vector<T, N>& rhs) const
 
 using vec2f = Vector<float, 2>;
 using vec3f = Vector<float, 3>;
+
+extern template struct Vector<float, 2>;
+extern template struct Vector<float, 3>;
+//extern template struct Vector<float, 4>;
+//extern template struct Vector<double, 2>; these 4 lines where not nessasery 
+//extern template struct Vector<double, 3>;
+//extern template struct Vector<double, 4>;
+
 
 
 //template <typename T, size_t N>
