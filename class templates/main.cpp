@@ -8,7 +8,7 @@ int main()
 	vec2f b{ 3, 4 };
 
 	vec2f c = a + b;
-	assert(c.data[0] == 4.0f && c.data[1] == 6.0f);
+	assert(c[0] == 4.0f && c[1] == 6.0f);
 
 	return 0;
 }

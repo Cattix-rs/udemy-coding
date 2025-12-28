@@ -12,10 +12,11 @@ struct Vector
 	template<typename Self>
 	auto&& operator[](this Self&& self, size_t i);
 
-	Vector<T, N> operator[](const Vector<T, N>& rhs) const;
 
 	T data[N];
 };
+
+
 
 template <typename T, size_t N>
 Vector<T, N> Vector<T, N>::operator+(const Vector<T, N>& rhs) const
@@ -28,6 +29,7 @@ Vector<T, N> Vector<T, N>::operator+(const Vector<T, N>& rhs) const
 	}
 	return res;
 }
+
 using vec2f = Vector<float, 2>;
 using vec3f = Vector<float, 3>;
 
@@ -39,6 +41,7 @@ auto&& Vector<T, N>::operator[](this Self&& self, size_t i)
 	assert(i < N);
 	return self.data[i];
 }
+
 
 
 
@@ -54,4 +57,3 @@ auto&& Vector<T, N>::operator[](this Self&& self, size_t i)
 //	assert(i < N);
 //	return data[i];
 //}
-
