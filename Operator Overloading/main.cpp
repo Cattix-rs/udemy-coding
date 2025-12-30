@@ -2,6 +2,12 @@
 #include <iostream>
 
 #include <Vector2.hpp>
+#include <Int.hpp>
+
+void printInt(int i)
+{
+	std::cout << i << std::endl;
+}
 
 int main()
 {
@@ -29,6 +35,11 @@ int main()
 	assert(a < b);
 	assert(b > a);
 
+	Int i = Int{1};
+	int j = static_cast<int>(i); // explicit cast to int
+	printInt(static_cast<int> (i));
+
+	i = 10;
 
 	return 0;
 }
