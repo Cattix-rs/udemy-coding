@@ -41,6 +41,40 @@ Vector2 Vector2::operator-() const
 	return { -x, -y };
 }
 
+Vector2& Vector2::operator++()
+{
+	x += 1.0f;
+	y += 1.0f;
+
+	return *this;
+}
+
+Vector2 Vector2::operator++(int)
+{
+	Vector2 tmp = *this;
+
+	++(*this);
+
+	return tmp;
+}
+
+Vector2& Vector2::operator--()
+{
+	x -= 1.0f;
+	y -= 1.0f;
+
+	return *this;
+}
+
+Vector2 Vector2::operator--(int)
+{
+	Vector2 tmp = *this;
+
+	--(*this);
+
+	return tmp;
+}
+
 
 Vector2 Vector2::operator+(const Vector2& rhs) const
 {

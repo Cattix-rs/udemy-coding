@@ -17,5 +17,9 @@ int main()
 	c += a;
 	assert(c.x == 5.0f && c.y == 8.0f);
 
+	Vector2 e = c--;
+	assert(e.x == 5.0f && e.y == 8.0f);
+	assert(c.x == 4.0f && c.y == 7.0f);
+
 	return 0;
 }

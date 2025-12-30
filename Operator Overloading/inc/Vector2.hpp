@@ -17,6 +17,11 @@ struct Vector2
 	//unary minus operator.
 	Vector2 operator-() const;
 
+	Vector2& operator++();
+	Vector2 operator++(int);
+	Vector2& operator--();
+	Vector2 operator--(int);
+
 	Vector2 operator+(const Vector2& rhs) const; // one way
 	Vector2 operator-(const Vector2& rhs) const;
 
