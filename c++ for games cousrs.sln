@@ -59,6 +59,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "class templates", "class te
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Move Semantics", "Move Semantics\Move Semantics.vcxproj", "{DFAAEFEB-A380-4CE2-905B-D3B86768B036}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Operator Overloading", "Operator Overloading\Operator Overloading.vcxproj", "{EB9DDC6E-AEBB-425A-B587-A900CBEF436B}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -291,6 +293,14 @@ Global
 		{DFAAEFEB-A380-4CE2-905B-D3B86768B036}.Release|x64.Build.0 = Release|x64
 		{DFAAEFEB-A380-4CE2-905B-D3B86768B036}.Release|x86.ActiveCfg = Release|Win32
 		{DFAAEFEB-A380-4CE2-905B-D3B86768B036}.Release|x86.Build.0 = Release|Win32
+		{EB9DDC6E-AEBB-425A-B587-A900CBEF436B}.Debug|x64.ActiveCfg = Debug|x64
+		{EB9DDC6E-AEBB-425A-B587-A900CBEF436B}.Debug|x64.Build.0 = Debug|x64
+		{EB9DDC6E-AEBB-425A-B587-A900CBEF436B}.Debug|x86.ActiveCfg = Debug|Win32
+		{EB9DDC6E-AEBB-425A-B587-A900CBEF436B}.Debug|x86.Build.0 = Debug|Win32
+		{EB9DDC6E-AEBB-425A-B587-A900CBEF436B}.Release|x64.ActiveCfg = Release|x64
+		{EB9DDC6E-AEBB-425A-B587-A900CBEF436B}.Release|x64.Build.0 = Release|x64
+		{EB9DDC6E-AEBB-425A-B587-A900CBEF436B}.Release|x86.ActiveCfg = Release|Win32
+		{EB9DDC6E-AEBB-425A-B587-A900CBEF436B}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
