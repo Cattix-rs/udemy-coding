@@ -1,4 +1,6 @@
+#include <cassert>
 #include <Vector2.hpp>
+
 
 Vector2::Vector2(float x)
 	: x{x}
@@ -100,3 +102,15 @@ Vector2 operator*(float lhs, const Vector2& rhs)
 {
 	return { lhs * rhs.x, lhs * rhs.y };
 }
+
+//float& Vector2::operator[](size_t i)
+//{
+//	assert(i < 2);
+//	return i == 0 ? x : y;
+//}
+//
+//float Vector2::operator[](size_t i) const
+//{
+//	assert(i < 2);
+//	return i == 0 ? x : y;
+//}

@@ -21,5 +21,7 @@ int main()
 	assert(e.x == 5.0f && e.y == 8.0f);
 	assert(c.x == 4.0f && c.y == 7.0f);
 
+	assert(c[0] == 4.0f && c[1] == 7.0f);
+
 	return 0;
 }

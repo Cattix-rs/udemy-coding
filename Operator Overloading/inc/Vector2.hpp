@@ -27,9 +27,23 @@ struct Vector2
 
 	Vector2 operator*(float rhs) const;
 
+
+	/*float& operator[](size_t i);
+	float operator[](size_t i) const;*/
+
+	template<typename Self>
+	auto&& operator[](this Self&& self, size_t i);
+
 	float x = 0.0f;
 	float y = 0.0f;
 };
 
 //Vector2 operator+(const Vector2& lhs, const Vector2 rhs);
 Vector2 operator*(float lhs, const Vector2& rhs);
+
+template <typename Self>
+auto&& Vector2::operator[](this Self&& self, size_t i)
+{
+	assert(i < 2);
+	return i == 0 ? self.x : self.y;
+}
