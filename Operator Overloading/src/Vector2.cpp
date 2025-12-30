@@ -93,6 +93,37 @@ Vector2 Vector2::operator*(float rhs) const
 	return { x * rhs, y * rhs };
 }
 
+
+
+//bool Vector2::operator<(const Vector2& rhs) const
+//{
+//	return x < rhs.x || x == rhs.x && y < rhs.y;
+//}
+//
+//bool Vector2::operator>(const Vector2& rhs) const
+//{
+//	return rhs < *this;
+//}
+//
+//bool Vector2::operator<=(const Vector2& rhs) const
+//{
+//	return !(*this > rhs);
+//}
+//
+//bool Vector2::operator>=(const Vector2& rhs) const
+//{
+//	return !(*this < rhs);
+//}
+//
+bool Vector2::operator==(const Vector2& rhs) const
+{
+	return x == rhs.x && y == rhs.y;
+}
+
+//bool Vector2::operator!=(const Vector2& rhs) const
+//	return !(*this == rhs);
+//}
+
 //Vector2 operator+(const Vector2& lhs, const Vector2 rhs)
 //{
 //	return { lhs.x + rhs.x, lhs.y + rhs.y };

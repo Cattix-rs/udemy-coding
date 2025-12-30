@@ -1,5 +1,7 @@
 #pragma once
 
+#include <compare>
+
 struct Vector2
 {
 	Vector2() = default;
@@ -27,12 +29,21 @@ struct Vector2
 
 	Vector2 operator*(float rhs) const;
 
-
 	/*float& operator[](size_t i);
 	float operator[](size_t i) const;*/
 
 	template<typename Self>
 	auto&& operator[](this Self&& self, size_t i);
+
+	//bool operator<(const Vector2& rhs) const;
+	//bool operator>(const Vector2& rhs) const;
+	//bool operator<=(const Vector2& rhs) const;
+	//bool operator>=(const Vector2& rhs) const;
+
+	bool operator==(const Vector2& rhs) const;
+	//bool operator!=(const Vector2& rhs) const;
+
+	auto operator<=>(const Vector2&) const;
 
 	float x = 0.0f;
 	float y = 0.0f;
@@ -46,4 +57,10 @@ auto&& Vector2::operator[](this Self&& self, size_t i)
 {
 	assert(i < 2);
 	return i == 0 ? self.x : self.y;
+}
+
+inline auto Vector2::operator<=>(const Vector2& rhs) const
+{
+	if (auto order = x <=> rhs.x; std::is_neq(order)) return order;
+	return y <=> rhs.y;
 }

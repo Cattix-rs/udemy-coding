@@ -23,5 +23,12 @@ int main()
 
 	assert(c[0] == 4.0f && c[1] == 7.0f);
 
+	Vector2 f = a;
+	assert(f == a);
+	assert(f != c);
+	assert(a < b);
+	assert(b > a);
+
+
 	return 0;
 }
