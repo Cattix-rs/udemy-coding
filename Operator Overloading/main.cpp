@@ -11,8 +11,11 @@ int main()
 	Vector2 c = a + b;
 	assert(c.x == 4.0f && c.y == 6.0f);
 
-	Vector2 d = a;// this should be d = -a following line 1.0f and 2.0f should be -1.0f and -2.0f
-	assert(d.x == 1.0f && d.y == 2.0f);
+	Vector2 d = -a;
+	assert(d.x == -1.0f && d.y == -2.0f);
+
+	c += a;
+	assert(c.x == 5.0f && c.y == 8.0f);
 
 	return 0;
 }

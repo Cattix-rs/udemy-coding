@@ -10,6 +10,36 @@ Vector2::Vector2(float x, float y)
 	, y{y}
 {}
 
+Vector2& Vector2::operator=(const Vector2& rhs)
+{
+	if (this == &rhs) return *this;
+
+	x = rhs.x;
+	y = rhs.y;
+
+	return *this;
+}
+
+Vector2& Vector2::operator+=(const Vector2& rhs)
+{
+	x += rhs.x;
+	y += rhs.y;
+
+	return *this;
+}
+
+Vector2& Vector2::operator-=(const Vector2& rhs)
+{
+	x -= rhs.x;
+	y -= rhs.y;
+
+	return *this;
+}
+
+Vector2 Vector2::operator-() const
+{
+	return { -x, -y };
+}
 
 
 Vector2 Vector2::operator+(const Vector2& rhs) const

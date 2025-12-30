@@ -6,7 +6,16 @@ struct Vector2
 	explicit Vector2(float x); // Initialize both components to x.
 	Vector2(float x, float y);
 
-	//Vector2 operator-() const;
+	//copy assignment operator.
+	Vector2& operator=(const Vector2& rhs);
+
+	//compound addition assignment operator
+	Vector2& operator+=(const Vector2& rhs);
+	//compound subtraction assignment operator.
+	Vector2& operator-=(const Vector2& rhs);
+
+	//unary minus operator.
+	Vector2 operator-() const;
 
 	Vector2 operator+(const Vector2& rhs) const; // one way
 	Vector2 operator-(const Vector2& rhs) const;
